@@ -20,6 +20,8 @@ $this->headScript()->appendFile($this->assetUrl('js/bootstrap.min.js'));
 $this->headScript()->appendFile($this->assetUrl('js/all.min.js'));//fontawesome
 $this->headScript()->appendFile($this->assetUrl('js/d3.min.js'));
 
+
+$this->JsUris(['site'=>$site]);
 $this->trigger('view.layout');
 
 ?>

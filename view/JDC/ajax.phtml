@@ -16,7 +16,7 @@ switch ($type) {
             ]);            
             echo $this->json(['ratingOf'=>$r['ma:isRatingOf'][0],'value'=>$etoile]);                
             break;
-    case 'changeItemItemSet':
+    case 'changeItemDim':
         $data = $this->params()->fromPost();
         $data['rt']=$type;
         echo $this->json( $this->CartoAffectFactory(['view'=>$data]));        
