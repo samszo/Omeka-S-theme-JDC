@@ -15,7 +15,12 @@ class JsUris extends AbstractHelper
      */
     public function __invoke($props)
     {
+        $view = $this->getView();
+        $user = $view->identity();
+        $jsUser = $user ? json_encode(['name'=>$user->getName(),'email'=>$user->getEmail(),'id'=>$user->getId(),'role'=>$user->getRole()]) : 'false';
         $urlAjax = $props['site']->siteUrl()."/page/ajax?json=1";
-        $this->getView()->headScript()->appendScript('const urlAjax = "'.$urlAjax.'";');
+        $view->headScript()->appendScript('const urlAjax = "'.$urlAjax.'";
+            const user = '.$jsUser.';
+        ');
     }
 }
