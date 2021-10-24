@@ -13,11 +13,11 @@ $this->headMeta()->appendName('viewport', 'width=device-width, initial-scale=1')
 $this->headTitle($siteTitle)->setSeparator(' · ');
 $this->headTitle()->append($this->setting('installation_title', 'Omeka S'));
 
-$this->headLink()->prependStylesheet($this->assetUrl('css/bootstrap.min.css'));
-
+//les librairy sont chargée dans le module JDC
+//$this->headLink()->prependStylesheet($this->assetUrl('css/bootstrap.min.css'));
 //$this->headScript()->appendFile($this->assetUrl('js/jquery-3.4.1.min.js'));
-$this->headScript()->appendFile($this->assetUrl('js/bootstrap.min.js'));
-$this->headScript()->appendFile($this->assetUrl('js/all.min.js'));//fontawesome
+//$this->headScript()->appendFile($this->assetUrl('js/bootstrap.min.js'));
+//$this->headScript()->appendFile($this->assetUrl('js/all.min.js'));//fontawesome
 //$this->headScript()->appendFile($this->assetUrl('js/d3.min.js'));
 
 
